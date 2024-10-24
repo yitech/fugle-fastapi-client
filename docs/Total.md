@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.total import Total
+from fugle_fastapi_client.models.total import Total
 
 # TODO update the JSON string below
 json = "{}"

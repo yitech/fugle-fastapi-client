@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.price_flag import PriceFlag
+from fugle_fastapi_client.models.price_flag import PriceFlag
 
 class TestPriceFlag(unittest.TestCase):
     """PriceFlag unit test stubs"""

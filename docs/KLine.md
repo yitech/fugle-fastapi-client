@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.k_line import KLine
+from fugle_fastapi_client.models.k_line import KLine
 
 # TODO update the JSON string below
 json = "{}"

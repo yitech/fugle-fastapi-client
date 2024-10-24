@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.market_status_response import MarketStatusResponse
+from fugle_fastapi_client.models.market_status_response import MarketStatusResponse
 
 class TestMarketStatusResponse(unittest.TestCase):
     """MarketStatusResponse unit test stubs"""

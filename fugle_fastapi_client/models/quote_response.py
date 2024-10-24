@@ -20,16 +20,16 @@ import json
 from datetime import date
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.bid_ask import BidAsk
-from openapi_client.models.last_trade import LastTrade
-from openapi_client.models.last_trial import LastTrial
-from openapi_client.models.total import Total
+from fugle_fastapi_client.models.bid_ask import BidAsk
+from fugle_fastapi_client.models.last_trade import LastTrade
+from fugle_fastapi_client.models.last_trial import LastTrial
+from fugle_fastapi_client.models.total import Total
 from typing import Optional, Set
 from typing_extensions import Self
 
-class Quote(BaseModel):
+class QuoteResponse(BaseModel):
     """
-    Quote
+    QuoteResponse
     """ # noqa: E501
     var_date: date = Field(alias="date")
     type: StrictStr
@@ -85,7 +85,7 @@ class Quote(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of Quote from a JSON string"""
+        """Create an instance of QuoteResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -158,7 +158,7 @@ class Quote(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of Quote from a dict"""
+        """Create an instance of QuoteResponse from a dict"""
         if obj is None:
             return None
 

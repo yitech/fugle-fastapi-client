@@ -18,15 +18,15 @@ from typing_extensions import Annotated
 
 from pydantic import StrictStr
 from typing import List
-from openapi_client.models.cancel_response import CancelResponse
-from openapi_client.models.create_order import CreateOrder
-from openapi_client.models.market_status_response import MarketStatusResponse
-from openapi_client.models.order_response import OrderResponse
-from openapi_client.models.order_result_response import OrderResultResponse
+from fugle_fastapi_client.models.cancel_response import CancelResponse
+from fugle_fastapi_client.models.create_order import CreateOrder
+from fugle_fastapi_client.models.market_status_response import MarketStatusResponse
+from fugle_fastapi_client.models.order_response import OrderResponse
+from fugle_fastapi_client.models.order_result_response import OrderResultResponse
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from fugle_fastapi_client.api_client import ApiClient, RequestSerialized
+from fugle_fastapi_client.api_response import ApiResponse
+from fugle_fastapi_client.rest import RESTResponseType
 
 
 class OrderApi:

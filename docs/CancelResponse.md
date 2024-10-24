@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.cancel_response import CancelResponse
+from fugle_fastapi_client.models.cancel_response import CancelResponse
 
 # TODO update the JSON string below
 json = "{}"

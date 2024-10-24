@@ -1,4 +1,4 @@
-# openapi_client.OrderApi
+# fugle_fastapi_client.OrderApi
 
 All URIs are relative to *http://localhost*
 
@@ -19,24 +19,24 @@ Create Order Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.create_order import CreateOrder
-from openapi_client.models.order_response import OrderResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.create_order import CreateOrder
+from fugle_fastapi_client.models.order_response import OrderResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OrderApi(api_client)
-    create_order = openapi_client.CreateOrder() # CreateOrder | 
+    api_instance = fugle_fastapi_client.OrderApi(api_client)
+    create_order = fugle_fastapi_client.CreateOrder() # CreateOrder | 
 
     try:
         # Create Order Endpoint
@@ -87,22 +87,22 @@ Delete Order Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.cancel_response import CancelResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.cancel_response import CancelResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OrderApi(api_client)
+    api_instance = fugle_fastapi_client.OrderApi(api_client)
     ord_no = 'ord_no_example' # str | 
 
     try:
@@ -154,22 +154,22 @@ Get Market Status Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.market_status_response import MarketStatusResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.market_status_response import MarketStatusResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OrderApi(api_client)
+    api_instance = fugle_fastapi_client.OrderApi(api_client)
 
     try:
         # Get Market Status Endpoint
@@ -216,22 +216,22 @@ Get Orders Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.order_result_response import OrderResultResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.order_result_response import OrderResultResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.OrderApi(api_client)
+    api_instance = fugle_fastapi_client.OrderApi(api_client)
 
     try:
         # Get Orders Endpoint

@@ -18,9 +18,9 @@ from typing_extensions import Annotated
 
 from typing import Any
 
-from openapi_client.api_client import ApiClient, RequestSerialized
-from openapi_client.api_response import ApiResponse
-from openapi_client.rest import RESTResponseType
+from fugle_fastapi_client.api_client import ApiClient, RequestSerialized
+from fugle_fastapi_client.api_response import ApiResponse
+from fugle_fastapi_client.rest import RESTResponseType
 
 
 class SystemApi:

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.market_status_response import MarketStatusResponse
+from fugle_fastapi_client.models.market_status_response import MarketStatusResponse
 
 # TODO update the JSON string below
 json = "{}"

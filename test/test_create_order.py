@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.create_order import CreateOrder
+from fugle_fastapi_client.models.create_order import CreateOrder
 
 class TestCreateOrder(unittest.TestCase):
     """CreateOrder unit test stubs"""

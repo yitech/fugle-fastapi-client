@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.inventory_response import InventoryResponse
+from fugle_fastapi_client.models.inventory_response import InventoryResponse
 
 class TestInventoryResponse(unittest.TestCase):
     """InventoryResponse unit test stubs"""
@@ -54,7 +54,7 @@ class TestInventoryResponse(unittest.TestCase):
                 rec_va_sum = 1.337,
                 s_type = '',
                 stk_dats = [
-                    openapi_client.models.inventory_detail.InventoryDetail(
+                    fugle_fastapi_client.models.inventory_detail.InventoryDetail(
                         buy_sell = '', 
                         cost_r = 1.337, 
                         fee = 1.337, 
@@ -103,7 +103,7 @@ class TestInventoryResponse(unittest.TestCase):
                 rec_va_sum = 1.337,
                 s_type = '',
                 stk_dats = [
-                    openapi_client.models.inventory_detail.InventoryDetail(
+                    fugle_fastapi_client.models.inventory_detail.InventoryDetail(
                         buy_sell = '', 
                         cost_r = 1.337, 
                         fee = 1.337, 

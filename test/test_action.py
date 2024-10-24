@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.action import Action
+from fugle_fastapi_client.models.action import Action
 
 class TestAction(unittest.TestCase):
     """Action unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.balance_response import BalanceResponse
+from fugle_fastapi_client.models.balance_response import BalanceResponse
 
 class TestBalanceResponse(unittest.TestCase):
     """BalanceResponse unit test stubs"""

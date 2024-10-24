@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.last_trial import LastTrial
+from fugle_fastapi_client.models.last_trial import LastTrial
 
 class TestLastTrial(unittest.TestCase):
     """LastTrial unit test stubs"""

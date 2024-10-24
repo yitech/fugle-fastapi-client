@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.bs_flag import BSFlag
+from fugle_fastapi_client.models.bs_flag import BSFlag
 
 class TestBSFlag(unittest.TestCase):
     """BSFlag unit test stubs"""

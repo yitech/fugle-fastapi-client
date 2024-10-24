@@ -1,4 +1,4 @@
-# openapi_client.MarketApi
+# fugle_fastapi_client.MarketApi
 
 All URIs are relative to *http://localhost*
 
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get_candles_api_v1_historical_candles_get**
-> KLines get_candles_api_v1_historical_candles_get(symbol, from_date, to_date, resolution=resolution)
+> KLinesResponse get_candles_api_v1_historical_candles_get(symbol, from_date, to_date, resolution=resolution)
 
 Get Candles
 
@@ -17,22 +17,22 @@ Get Candles
 
 
 ```python
-import openapi_client
-from openapi_client.models.k_lines import KLines
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.k_lines_response import KLinesResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MarketApi(api_client)
+    api_instance = fugle_fastapi_client.MarketApi(api_client)
     symbol = 'symbol_example' # str | 
     from_date = 'from_date_example' # str | 
     to_date = 'to_date_example' # str | 
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KLines**](KLines.md)
+[**KLinesResponse**](KLinesResponse.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_quote_api_v1_intraday_quote_get**
-> Quote get_quote_api_v1_intraday_quote_get(symbol, type=type)
+> QuoteResponse get_quote_api_v1_intraday_quote_get(symbol, type=type)
 
 Get Quote
 
@@ -90,22 +90,22 @@ Get Quote
 
 
 ```python
-import openapi_client
-from openapi_client.models.quote import Quote
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.quote_response import QuoteResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MarketApi(api_client)
+    api_instance = fugle_fastapi_client.MarketApi(api_client)
     symbol = 'symbol_example' # str | 
     type = EQUITY # str |  (optional) (default to EQUITY)
 
@@ -130,7 +130,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Quote**](Quote.md)
+[**QuoteResponse**](QuoteResponse.md)
 
 ### Authorization
 

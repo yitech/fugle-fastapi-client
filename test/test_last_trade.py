@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.last_trade import LastTrade
+from fugle_fastapi_client.models.last_trade import LastTrade
 
 class TestLastTrade(unittest.TestCase):
     """LastTrade unit test stubs"""

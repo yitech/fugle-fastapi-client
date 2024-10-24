@@ -19,11 +19,11 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.action import Action
-from openapi_client.models.ap_code import APCode
-from openapi_client.models.bs_flag import BSFlag
-from openapi_client.models.price_flag import PriceFlag
-from openapi_client.models.trade import Trade
+from fugle_fastapi_client.models.action import Action
+from fugle_fastapi_client.models.ap_code import APCode
+from fugle_fastapi_client.models.bs_flag import BSFlag
+from fugle_fastapi_client.models.price_flag import PriceFlag
+from fugle_fastapi_client.models.trade import Trade
 from typing import Optional, Set
 from typing_extensions import Self
 

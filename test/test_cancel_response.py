@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.cancel_response import CancelResponse
+from fugle_fastapi_client.models.cancel_response import CancelResponse
 
 class TestCancelResponse(unittest.TestCase):
     """CancelResponse unit test stubs"""

@@ -19,21 +19,18 @@ import json
 
 from pydantic import BaseModel, ConfigDict, StrictStr
 from typing import Any, ClassVar, Dict, List
-from openapi_client.models.k_line import KLine
+from fugle_fastapi_client.models.validation_error_loc_inner import ValidationErrorLocInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class KLines(BaseModel):
+class ValidationError(BaseModel):
     """
-    KLines
+    ValidationError
     """ # noqa: E501
-    symbol: StrictStr
+    loc: List[ValidationErrorLocInner]
+    msg: StrictStr
     type: StrictStr
-    exchange: StrictStr
-    market: StrictStr
-    timeframe: StrictStr
-    data: List[KLine]
-    __properties: ClassVar[List[str]] = ["symbol", "type", "exchange", "market", "timeframe", "data"]
+    __properties: ClassVar[List[str]] = ["loc", "msg", "type"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -53,7 +50,7 @@ class KLines(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of KLines from a JSON string"""
+        """Create an instance of ValidationError from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -74,18 +71,18 @@ class KLines(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in data (list)
+        # override the default output from pydantic by calling `to_dict()` of each item in loc (list)
         _items = []
-        if self.data:
-            for _item_data in self.data:
-                if _item_data:
-                    _items.append(_item_data.to_dict())
-            _dict['data'] = _items
+        if self.loc:
+            for _item_loc in self.loc:
+                if _item_loc:
+                    _items.append(_item_loc.to_dict())
+            _dict['loc'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of KLines from a dict"""
+        """Create an instance of ValidationError from a dict"""
         if obj is None:
             return None
 
@@ -93,12 +90,9 @@ class KLines(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "symbol": obj.get("symbol"),
-            "type": obj.get("type"),
-            "exchange": obj.get("exchange"),
-            "market": obj.get("market"),
-            "timeframe": obj.get("timeframe"),
-            "data": [KLine.from_dict(_item) for _item in obj["data"]] if obj.get("data") is not None else None
+            "loc": [ValidationErrorLocInner.from_dict(_item) for _item in obj["loc"]] if obj.get("loc") is not None else None,
+            "msg": obj.get("msg"),
+            "type": obj.get("type")
         })
         return _obj
 

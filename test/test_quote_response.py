@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.quote import Quote
+from fugle_fastapi_client.models.quote_response import QuoteResponse
 
-class TestQuote(unittest.TestCase):
-    """Quote unit test stubs"""
+class TestQuoteResponse(unittest.TestCase):
+    """QuoteResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,16 +25,16 @@ class TestQuote(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> Quote:
-        """Test Quote
+    def make_instance(self, include_optional) -> QuoteResponse:
+        """Test QuoteResponse
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `Quote`
+        # uncomment below to create an instance of `QuoteResponse`
         """
-        model = Quote()
+        model = QuoteResponse()
         if include_optional:
-            return Quote(
+            return QuoteResponse(
                 var_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 type = '',
                 exchange = '',
@@ -58,30 +58,30 @@ class TestQuote(unittest.TestCase):
                 last_price = 1.337,
                 last_size = 56,
                 bids = [
-                    openapi_client.models.bid_ask.BidAsk(
+                    fugle_fastapi_client.models.bid_ask.BidAsk(
                         price = 1.337, 
                         size = 56, )
                     ],
                 asks = [
-                    openapi_client.models.bid_ask.BidAsk(
+                    fugle_fastapi_client.models.bid_ask.BidAsk(
                         price = 1.337, 
                         size = 56, )
                     ],
-                total = openapi_client.models.total.Total(
+                total = fugle_fastapi_client.models.total.Total(
                     trade_value = 56, 
                     trade_volume = 56, 
                     trade_volume_at_bid = 56, 
                     trade_volume_at_ask = 56, 
                     transaction = 56, 
                     time = 56, ),
-                last_trade = openapi_client.models.last_trade.LastTrade(
+                last_trade = fugle_fastapi_client.models.last_trade.LastTrade(
                     bid = 1.337, 
                     ask = 1.337, 
                     price = 1.337, 
                     size = 56, 
                     time = 56, 
                     serial = 56, ),
-                last_trial = openapi_client.models.last_trial.LastTrial(
+                last_trial = fugle_fastapi_client.models.last_trial.LastTrial(
                     bid = 1.337, 
                     ask = 1.337, 
                     price = 1.337, 
@@ -97,7 +97,7 @@ class TestQuote(unittest.TestCase):
                 serial = 56
             )
         else:
-            return Quote(
+            return QuoteResponse(
                 var_date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(),
                 type = '',
                 exchange = '',
@@ -121,30 +121,30 @@ class TestQuote(unittest.TestCase):
                 last_price = 1.337,
                 last_size = 56,
                 bids = [
-                    openapi_client.models.bid_ask.BidAsk(
+                    fugle_fastapi_client.models.bid_ask.BidAsk(
                         price = 1.337, 
                         size = 56, )
                     ],
                 asks = [
-                    openapi_client.models.bid_ask.BidAsk(
+                    fugle_fastapi_client.models.bid_ask.BidAsk(
                         price = 1.337, 
                         size = 56, )
                     ],
-                total = openapi_client.models.total.Total(
+                total = fugle_fastapi_client.models.total.Total(
                     trade_value = 56, 
                     trade_volume = 56, 
                     trade_volume_at_bid = 56, 
                     trade_volume_at_ask = 56, 
                     transaction = 56, 
                     time = 56, ),
-                last_trade = openapi_client.models.last_trade.LastTrade(
+                last_trade = fugle_fastapi_client.models.last_trade.LastTrade(
                     bid = 1.337, 
                     ask = 1.337, 
                     price = 1.337, 
                     size = 56, 
                     time = 56, 
                     serial = 56, ),
-                last_trial = openapi_client.models.last_trial.LastTrial(
+                last_trial = fugle_fastapi_client.models.last_trial.LastTrial(
                     bid = 1.337, 
                     ask = 1.337, 
                     price = 1.337, 
@@ -156,8 +156,8 @@ class TestQuote(unittest.TestCase):
         )
         """
 
-    def testQuote(self):
-        """Test Quote"""
+    def testQuoteResponse(self):
+        """Test QuoteResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

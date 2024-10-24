@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.k_line import KLine
+from fugle_fastapi_client.models.k_line import KLine
 
 class TestKLine(unittest.TestCase):
     """KLine unit test stubs"""

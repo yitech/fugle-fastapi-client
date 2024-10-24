@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.market_api import MarketApi
+from fugle_fastapi_client.api.market_api import MarketApi
 
 
 class TestMarketApi(unittest.TestCase):

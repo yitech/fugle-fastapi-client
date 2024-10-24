@@ -1,4 +1,4 @@
-# openapi_client.WalletApi
+# fugle_fastapi_client.WalletApi
 
 All URIs are relative to *http://localhost*
 
@@ -18,22 +18,22 @@ Get Balance Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.balance_response import BalanceResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.balance_response import BalanceResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WalletApi(api_client)
+    api_instance = fugle_fastapi_client.WalletApi(api_client)
 
     try:
         # Get Balance Endpoint
@@ -80,22 +80,22 @@ Get Inventories Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.inventory_response import InventoryResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.inventory_response import InventoryResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WalletApi(api_client)
+    api_instance = fugle_fastapi_client.WalletApi(api_client)
 
     try:
         # Get Inventories Endpoint
@@ -142,22 +142,22 @@ Get Settlements Endpoint
 
 
 ```python
-import openapi_client
-from openapi_client.models.settlement_response import SettlementResponse
-from openapi_client.rest import ApiException
+import fugle_fastapi_client
+from fugle_fastapi_client.models.settlement_response import SettlementResponse
+from fugle_fastapi_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = fugle_fastapi_client.Configuration(
     host = "http://localhost"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with fugle_fastapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WalletApi(api_client)
+    api_instance = fugle_fastapi_client.WalletApi(api_client)
 
     try:
         # Get Settlements Endpoint

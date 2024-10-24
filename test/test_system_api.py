@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.system_api import SystemApi
+from fugle_fastapi_client.api.system_api import SystemApi
 
 
 class TestSystemApi(unittest.TestCase):

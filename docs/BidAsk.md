@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.bid_ask import BidAsk
+from fugle_fastapi_client.models.bid_ask import BidAsk
 
 # TODO update the JSON string below
 json = "{}"

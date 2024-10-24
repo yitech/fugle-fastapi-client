@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.trade import Trade
+from fugle_fastapi_client.models.trade import Trade
 
 class TestTrade(unittest.TestCase):
     """Trade unit test stubs"""

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.bid_ask import BidAsk
+from fugle_fastapi_client.models.bid_ask import BidAsk
 
 class TestBidAsk(unittest.TestCase):
     """BidAsk unit test stubs"""

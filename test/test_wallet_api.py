@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.api.wallet_api import WalletApi
+from fugle_fastapi_client.api.wallet_api import WalletApi
 
 
 class TestWalletApi(unittest.TestCase):

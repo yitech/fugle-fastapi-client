@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.total import Total
+from fugle_fastapi_client.models.total import Total
 
 class TestTotal(unittest.TestCase):
     """Total unit test stubs"""

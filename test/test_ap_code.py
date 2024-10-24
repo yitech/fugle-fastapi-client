@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.ap_code import APCode
+from fugle_fastapi_client.models.ap_code import APCode
 
 class TestAPCode(unittest.TestCase):
     """APCode unit test stubs"""

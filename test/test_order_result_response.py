@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.order_result_response import OrderResultResponse
+from fugle_fastapi_client.models.order_result_response import OrderResultResponse
 
 class TestOrderResultResponse(unittest.TestCase):
     """OrderResultResponse unit test stubs"""

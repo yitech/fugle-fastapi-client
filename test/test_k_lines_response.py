@@ -14,10 +14,10 @@
 
 import unittest
 
-from openapi_client.models.k_lines import KLines
+from fugle_fastapi_client.models.k_lines_response import KLinesResponse
 
-class TestKLines(unittest.TestCase):
-    """KLines unit test stubs"""
+class TestKLinesResponse(unittest.TestCase):
+    """KLinesResponse unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,23 +25,23 @@ class TestKLines(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def make_instance(self, include_optional) -> KLines:
-        """Test KLines
+    def make_instance(self, include_optional) -> KLinesResponse:
+        """Test KLinesResponse
             include_optional is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # uncomment below to create an instance of `KLines`
+        # uncomment below to create an instance of `KLinesResponse`
         """
-        model = KLines()
+        model = KLinesResponse()
         if include_optional:
-            return KLines(
+            return KLinesResponse(
                 symbol = '',
                 type = '',
                 exchange = '',
                 market = '',
                 timeframe = '',
                 data = [
-                    openapi_client.models.k_line.KLine(
+                    fugle_fastapi_client.models.k_line.KLine(
                         date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                         open = 1.337, 
                         high = 1.337, 
@@ -51,14 +51,14 @@ class TestKLines(unittest.TestCase):
                     ]
             )
         else:
-            return KLines(
+            return KLinesResponse(
                 symbol = '',
                 type = '',
                 exchange = '',
                 market = '',
                 timeframe = '',
                 data = [
-                    openapi_client.models.k_line.KLine(
+                    fugle_fastapi_client.models.k_line.KLine(
                         date = datetime.datetime.strptime('1975-12-30', '%Y-%m-%d').date(), 
                         open = 1.337, 
                         high = 1.337, 
@@ -69,8 +69,8 @@ class TestKLines(unittest.TestCase):
         )
         """
 
-    def testKLines(self):
-        """Test KLines"""
+    def testKLinesResponse(self):
+        """Test KLinesResponse"""
         # inst_req_only = self.make_instance(include_optional=False)
         # inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.inventory_detail import InventoryDetail
+from fugle_fastapi_client.models.inventory_detail import InventoryDetail
 
 class TestInventoryDetail(unittest.TestCase):
     """InventoryDetail unit test stubs"""

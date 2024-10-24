@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.last_trade import LastTrade
+from fugle_fastapi_client.models.last_trade import LastTrade
 
 # TODO update the JSON string below
 json = "{}"

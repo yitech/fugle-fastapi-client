@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.order_result_response import OrderResultResponse
+from fugle_fastapi_client.models.order_result_response import OrderResultResponse
 
 # TODO update the JSON string below
 json = "{}"

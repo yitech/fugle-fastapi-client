@@ -17,18 +17,29 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict
-from typing import Any, ClassVar, Dict, List, Optional
-from openapi_client.models.validation_error import ValidationError
+from pydantic import BaseModel, ConfigDict, StrictFloat, StrictInt, StrictStr
+from typing import Any, ClassVar, Dict, List, Union
+from fugle_fastapi_client.models.action import Action
+from fugle_fastapi_client.models.ap_code import APCode
+from fugle_fastapi_client.models.bs_flag import BSFlag
+from fugle_fastapi_client.models.price_flag import PriceFlag
+from fugle_fastapi_client.models.trade import Trade
 from typing import Optional, Set
 from typing_extensions import Self
 
-class HTTPValidationError(BaseModel):
+class CreateOrder(BaseModel):
     """
-    HTTPValidationError
+    CreateOrder
     """ # noqa: E501
-    detail: Optional[List[ValidationError]] = None
-    __properties: ClassVar[List[str]] = ["detail"]
+    buy_sell: Action
+    ap_code: APCode
+    price_flag: PriceFlag
+    bs_flag: BSFlag
+    trade: Trade
+    stock_no: StrictStr
+    quantity: StrictInt
+    price: Union[StrictFloat, StrictInt]
+    __properties: ClassVar[List[str]] = ["buy_sell", "ap_code", "price_flag", "bs_flag", "trade", "stock_no", "quantity", "price"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -48,7 +59,7 @@ class HTTPValidationError(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of HTTPValidationError from a JSON string"""
+        """Create an instance of CreateOrder from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -69,18 +80,11 @@ class HTTPValidationError(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
-        # override the default output from pydantic by calling `to_dict()` of each item in detail (list)
-        _items = []
-        if self.detail:
-            for _item_detail in self.detail:
-                if _item_detail:
-                    _items.append(_item_detail.to_dict())
-            _dict['detail'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of HTTPValidationError from a dict"""
+        """Create an instance of CreateOrder from a dict"""
         if obj is None:
             return None
 
@@ -88,7 +92,14 @@ class HTTPValidationError(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "detail": [ValidationError.from_dict(_item) for _item in obj["detail"]] if obj.get("detail") is not None else None
+            "buy_sell": obj.get("buy_sell"),
+            "ap_code": obj.get("ap_code"),
+            "price_flag": obj.get("price_flag"),
+            "bs_flag": obj.get("bs_flag"),
+            "trade": obj.get("trade"),
+            "stock_no": obj.get("stock_no"),
+            "quantity": obj.get("quantity"),
+            "price": obj.get("price")
         })
         return _obj
 

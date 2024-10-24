@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.inventory_detail import InventoryDetail
+from fugle_fastapi_client.models.inventory_detail import InventoryDetail
 
 # TODO update the JSON string below
 json = "{}"
